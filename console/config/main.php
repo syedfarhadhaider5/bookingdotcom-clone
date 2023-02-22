@@ -21,6 +21,11 @@ return [
             'class' => \yii\console\controllers\FixtureController::class,
             'namespace' => 'common\fixtures',
           ],
+          'migrate' => [
+            'class' => yii\console\controllers\MigrateController::class,
+            'migrationPath' => '@common/migrations/db',
+            'migrationTable' => '{{%system_db_migration}}'
+        ],
     ],
     'components' => [
         'log' => [
