@@ -21,11 +21,9 @@ AppAsset::register($this);
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
 
-<main role="main">
     <div class="container">
         <?= $content ?>
     </div>
-</main>
 
 <?php $this->endBody() ?>
 </body>
