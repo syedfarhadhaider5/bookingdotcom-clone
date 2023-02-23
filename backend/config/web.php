@@ -70,6 +70,12 @@ $params = array_merge(
                 'allow' => true,
                 'roles' => ['admin'],
             ],
+            [
+                'controllers' => ['user'],
+                'actions' => ['create'],
+                'allow' => true,
+                'roles' => ['@'],
+            ],
         ]
     ],
     'params' => $params,

@@ -102,7 +102,18 @@ class User extends ActiveRecord implements IdentityInterface
             'status' => self::STATUS_ACTIVE,
         ]);
     }
-
+    /**
+     * Returns user statuses list
+     * @return array|mixed
+     */
+    public static function statuses()
+    {
+        return [
+            self::STATUS_INACTIVE => 'InActive',//Yii::t('common', 'Deleted')
+            self::STATUS_ACTIVE => 'Active', //Yii::t('common', 'Active'),
+            self::STATUS_DELETED => 'Deleted'
+        ];
+    }
     /**
      * Finds user by verification email token
      *
@@ -185,13 +196,33 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->auth_key = Yii::$app->security->generateRandomString();
     }
-
+    /**
+     * Creates user profile and application event
+     * @param array $profileData
+     */
+    public function afterSignup(array $profileData = [])
+    {
+        $this->refresh();
+        $profile = new UserProfile();
+        $profile->locale = Yii::$app->language;
+        $profile->user_id = $profileData['user_id'];
+        $profile->firstname = $profileData['first_name'];
+        $profile->lastname = $profileData['last_name'];
+        $this->link('userProfile', $profile);
+    }
     /**
      * Generates new password reset token
      */
     public function generatePasswordResetToken()
     {
         $this->access_token = Yii::$app->security->generateRandomString() . '_' . time();
+    }
+    /**
+     * Generates new access token
+     */
+    public function generateAccessToken()
+    {
+        $this->access_token = Yii::$app->security->generateRandomString();
     }
 
     /**
@@ -208,5 +239,12 @@ class User extends ActiveRecord implements IdentityInterface
     public function removePasswordResetToken()
     {
         $this->$access_token = null;
+    }
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUserProfile()
+    {
+        return $this->hasOne(UserProfile::class, ['user_id' => 'id']);
     }
 }

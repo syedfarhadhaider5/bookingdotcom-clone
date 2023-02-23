@@ -10,7 +10,7 @@ use yii\web\Controller;
 use yii\web\Response;
 
 /**
- * Site controller
+ * SignIn controller
  */
 class SignInController extends Controller
 {
