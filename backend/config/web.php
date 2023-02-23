@@ -7,10 +7,11 @@ $params = array_merge(
 );
 
 
-return [
+ $config = [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
+    'defaultRoute' => 'sign-in/login',
     'bootstrap' => ['log'],
     'modules' => [],
     'components' => [
@@ -37,7 +38,7 @@ return [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'sign-in/error',
         ],
        'urlManager' => [
            'enablePrettyUrl' => true,
@@ -46,5 +47,33 @@ return [
            ],
        ],
     ],
+    'as globalAccess' => [
+        'class' => '\yii\filters\AccessControl',
+        'rules' => [
+            [
+                'controllers' => ['sign-in','error'],
+                'actions' => ['login'],
+                'allow' => true,
+            ],
+            [
+                'controllers' => ['sign-in'],
+                'actions' => ['index','logout'],
+                'allow' => true,
+                'roles' => ['@'],
+            ],
+            [
+                'allow' => true,
+                'roles' => ['@'],
+            ],
+            [
+                'controllers' => ['gii/*'],
+                'allow' => true,
+                'roles' => ['admin'],
+            ],
+        ]
+    ],
     'params' => $params,
 ];
+
+
+return $config;

@@ -21,5 +21,18 @@ if (!YII_ENV_TEST) {
         'class' => \yii\gii\Module::class,
     ];
 }
-
+if(!YII_ENV_DEV){
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
+        'allowedIPs' => ['127.0.0.1', '::1'], // allow access only from localhost
+        'generators' => [ // configure the available generators
+            'crud' => [
+                'class' => 'yii\gii\generators\crud\Generator',
+                'templates' => [
+                    'myCrud' => '@app/gii/templates/crud/default',
+                ]
+            ]
+        ],
+    ];
+}
 return $config;
