@@ -52,13 +52,13 @@ const STATUS_LABELS = [
                                 'template' => '{view} {update} {delete}',
                                 'buttons' => [
                                     'view' => function ($url, $model, $key) {
-                                        return '<button href="' . $url . '" class="btn btn-primary btn-sm">View</button>';
+                                        return '<a  href="' . $url . '"><button class="btn btn-primary btn-sm">View</button></a>';
                                     },
                                     'update' => function ($url, $model, $key) {
-                                        return '<button href="' . $url . '" class="btn btn-warning btn-sm">Update</button>';
+                                        return '<a  href="' . $url . '"><button class="btn btn-warning btn-sm">Update</button></a>';
                                     },
                                     'delete' => function ($url, $model, $key) {
-                                        return '<button href="' . $url . '" class="btn btn-danger btn-sm" data-method="post" data-confirm="Are you sure you want to delete this item?">Delete</button>';
+                                        return '<a data-method="post" href="' . $url . '"><button  class="btn btn-danger btn-sm" >Delete</button></a>';
                                     },
                                 ],
                             ],

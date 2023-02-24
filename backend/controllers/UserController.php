@@ -5,6 +5,7 @@ namespace backend\controllers;
 use backend\models\search\UserSearch;
 use backend\models\UserForm;
 use common\models\LoginForm;
+use common\models\User;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -46,10 +47,43 @@ class UserController extends Controller
         $model = new UserForm();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
-            return $this->redirect(['sign-in/index']);
+            return $this->redirect(['user/index']);
         }
         return $this->render('create', [
             'model' => $model,
         ]);
+    }
+    /**
+     * Updates an existing User model.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionUpdate($id)
+    {
+        $model = new UserForm();
+        $userModel = User::findOne($id);
+        $model->setModel($userModel);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['user/index']);
+        }
+
+        return $this->render('update', [
+            'model' => $model,
+        ]);
+    }
+    /**
+     * Deletes an existing User model.
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionDelete($id)
+    {
+        $model = User::findOne($id);
+        if (User::find()->count() > 1 and $id != 1) {
+         //   Yii::$app->authManager->revokeAll($id);
+            $model->delete();
+        }
+        return $this->redirect(['user/index']);
     }
 }

@@ -34,14 +34,24 @@ class UserForm extends Model
             ['repeat_password', 'compare', 'compareAttribute' => 'password', 'message' => "Passwords don't match"],
             [['username'], 'string', 'max' => 32],
             [['email'], 'string', 'max' => 255],
-            ['email', 'unique',
-                'targetClass' => '\common\models\User',
-                'message' => 'This User already exists in the system'
-            ],
-            ['username', 'unique',
-                'targetClass' => '\common\models\User',
-                'message' => 'This User Name already exists in the system'
-            ],
+//            ['email', 'unique',
+//                'targetClass' => '\common\models\User',
+//                'message' => 'This User already exists in the system'
+//            ],
+            ['username', 'unique', 'targetClass' => User::class, 'filter' => function ($query) {
+                if (!$this->getModel()->isNewRecord) {
+                    $query->andWhere(['not', ['id' => $this->getModel()->id]]);
+                }
+            }],
+            ['email', 'unique', 'targetClass' => User::class, 'filter' => function ($query) {
+                if (!$this->getModel()->isNewRecord) {
+                    $query->andWhere(['not', ['id' => $this->getModel()->id]]);
+                }
+            }],
+//            ['username', 'unique',
+//                'targetClass' => '\common\models\User',
+//                'message' => 'This User Name already exists in the system'
+//            ],
         ];
     }
 
@@ -106,4 +116,18 @@ class UserForm extends Model
         }
         return null;
     }
+    /**
+     * @param User $model
+     * @return mixed
+     */
+    public function setModel($model)
+    {
+        $this->username = $model->username;
+        $this->email = $model->email;
+        $this->status = $model->status;
+        $this->model = $model;
+
+        return $this->model;
+    }
+
 }

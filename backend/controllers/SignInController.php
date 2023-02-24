@@ -14,6 +14,8 @@ use yii\web\Response;
  */
 class SignInController extends Controller
 {
+    public $defaultAction = 'login';
+
     public function behaviors()
     {
         return [
