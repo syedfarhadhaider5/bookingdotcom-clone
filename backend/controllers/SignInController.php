@@ -73,7 +73,7 @@ class SignInController extends Controller
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             // return $this->goBack();
-            return Yii::$app->response->redirect(['sign-in/index']);
+            return Yii::$app->response->redirect(['user/index']);
         }
 
         $model->password = '';

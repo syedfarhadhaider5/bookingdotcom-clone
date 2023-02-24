@@ -2,6 +2,7 @@
 
 namespace backend\controllers;
 
+use backend\models\search\UserSearch;
 use backend\models\UserForm;
 use common\models\LoginForm;
 use Yii;
@@ -25,6 +26,15 @@ class UserController extends Controller
                 ],
             ],
         ];
+    }
+    public function actionIndex(){
+        $userSearch = new UserSearch();
+        $dataProvider = $userSearch->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'userSearch' => $userSearch,
+            'dataProvider' => $dataProvider,
+        ]);
     }
     /**
      * Creates a new User model.

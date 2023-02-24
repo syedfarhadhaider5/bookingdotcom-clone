@@ -10,3 +10,13 @@ body{
 .help-block{
     color: red;
 }
+.gridstyles  table  thead a{
+    color: #000000;
+    text-decoration: none;
+    font-weight: normal;
+}
+.gridstyles  table  tbody a{
+    color: #000000;
+    text-decoration: none;
+    font-weight: normal;
+}
