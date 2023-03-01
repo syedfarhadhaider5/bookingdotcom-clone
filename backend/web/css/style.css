@@ -20,3 +20,11 @@ body{
     text-decoration: none;
     font-weight: normal;
 }
+.custom-breadcrumb{
+   padding: .5rem .5rem !important;
+    margin-left: 10px;
+}
+.custom-breadcrumb a{
+    color: #000000 !important;
+    text-decoration: none;
+}

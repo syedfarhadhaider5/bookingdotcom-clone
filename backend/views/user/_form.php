@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 ?>
 <?php $form = ActiveForm::begin() ?>
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-body">
                 <?php echo $form->field($model, 'username')->textInput(['options' => ['placeholder' => 'Enter UserName']]) ?>
@@ -25,6 +25,5 @@ use yii\widgets\ActiveForm;
             </div>
         </div>
     </div>
-    <div class="col-md-4"></div>
 </div>
 <?php ActiveForm::end() ?>

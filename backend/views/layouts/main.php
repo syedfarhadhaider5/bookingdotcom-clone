@@ -134,7 +134,7 @@ AppAsset::register($this);
                     <img src="<?= Yii::$app->urlManager->createUrl('images/farhad.jpg') ?>" class="rounded-circle" alt="User Image" style="width: 30px; height: 30px; ">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block text-decoration-none">Farhad Haider</a>
+                    <a href="#" class="d-block text-decoration-none"><?= ucfirst(Yii::$app->user->identity->username) ?></a>
                 </div>
             </div>
 
@@ -162,10 +162,10 @@ AppAsset::register($this);
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon far fa-image"></i>
+                        <a href="<?= Url::to(['user/index']);?>" class="nav-link">
+                            <i class="nav-icon far fa-user"></i>
                             <p>
-                                Gallery
+                                Users
                             </p>
                         </a>
                     </li>
@@ -180,19 +180,6 @@ AppAsset::register($this);
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Dashboard</h1>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard v1</li>
-                        </ol>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
             <section class="content">
                 <div class="container-fluid">
                     <main role="main" class="flex-shrink-0">

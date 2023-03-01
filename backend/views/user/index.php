@@ -7,6 +7,7 @@ use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 
 /**
@@ -15,18 +16,26 @@ use yii\helpers\Html;
  * @var yii\data\ActiveDataProvider $dataProvider
  * @var backend\models\search\UserSearch $userSearch
 **/
-const STATUS_LABELS = [
-    0 => 'Inactive',
-    1 => 'Active',
-    2 => 'Pending',
-];
 ?>
-
+    <div class="card">
+        <div class="card-body custom-breadcrumb">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="<?= Yii::$app->urlManager->createUrl('user/index'); ?>">Users</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
 
 <div class="row">
     <div class="col-md-12">
         <div class="card  mt-4">
             <div class="card-body">
+                <div class="float-end">
+                    <a href="<?= Url::to(['user/create']);?>">
+                        <button type="button" class="btn btn-success">Add New User</button>
+                    </a>
+                </div>
                 <div class="table-responsive">
                     <?= GridView::widget([
                         'dataProvider' => $dataProvider,
@@ -49,7 +58,7 @@ const STATUS_LABELS = [
 
                             [
                                 'class' => ActionColumn::className(),
-                                'template' => '{view} {update} {delete}',
+                                'template' => '{update} {delete}',
                                 'buttons' => [
                                     'view' => function ($url, $model, $key) {
                                         return '<a  href="' . $url . '"><button class="btn btn-primary btn-sm">View</button></a>';
