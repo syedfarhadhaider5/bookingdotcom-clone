@@ -14,10 +14,10 @@ use yii\widgets\ActiveForm;
     <div class="col-md-12">
         <div class="card">
             <div class="card-body">
-                <?php echo $form->field($model, 'username')->textInput(['options' => ['placeholder' => 'Enter UserName']]) ?>
-                <?php echo $form->field($model, 'email')->textInput(['options' => ['placeholder' => 'Enter Email']]) ?>
-                <?php echo $form->field($model, 'password')->passwordInput(['options' => ['placeholder' => 'Enter Password']]) ?>
-                <?php echo $form->field($model, 'repeat_password')->passwordInput(['options' => ['placeholder' => 'Enter Same Password']]) ?>
+                <?php echo $form->field($model, 'username')->textInput(['placeholder' => 'Enter UserName']) ?>
+                <?php echo $form->field($model, 'email')->textInput(['placeholder' => 'Enter Email']) ?>
+                <?php echo $form->field($model, 'password')->passwordInput(['placeholder' => 'Enter Password']) ?>
+                <?php echo $form->field($model, 'repeat_password')->passwordInput(['placeholder' => 'Enter Same Password']) ?>
                 <?php echo $form->field($model, 'status')->dropDownList(User::statuses()) ?>
             </div>
             <div class="card-footer">
