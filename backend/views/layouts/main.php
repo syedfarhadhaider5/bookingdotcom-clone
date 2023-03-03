@@ -111,16 +111,20 @@ AppAsset::register($this);
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>ChartJS</p>
+                                <a href="<?= Yii::$app->urlManager->createUrl('admin/hotels/index')?>" class="nav-link">
+                                    <i class="fa fa-hotel nav-icon"></i>
+                                    <p>All Hotels</p>
+                                </a>
+                                <a href="<?= Yii::$app->urlManager->createUrl('admin/hotels/create')?>" class="nav-link">
+                                    <i class="fa fa-hotel nav-icon"></i>
+                                    <p>Add Hotel</p>
                                 </a>
                             </li>
 
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="<?= Url::to(['user/index']);?>" class="nav-link">
+                        <a href="<?= Yii::$app->urlManager->createUrl('user/index')?>" class="nav-link">
                             <i class="nav-icon far fa-user"></i>
                             <p>
                                 Users

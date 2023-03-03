@@ -13,7 +13,11 @@ $params = array_merge(
     'controllerNamespace' => 'backend\controllers',
     'defaultRoute' => 'sign-in/login',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'admin' => [
+            'class' => backend\modules\admin\Module::class,
+        ],
+    ],
     'components' => [
         'request' => [
         'enableCookieValidation' => false,
@@ -77,7 +81,14 @@ $params = array_merge(
                 'allow' => true,
                 'roles' => ['@'],
             ],
-        ]
+            [
+                'controllers' => ['hotels'],
+                'actions' => ['index'],
+                'allow' => true,
+                'roles' => ['admin'],
+            ],
+        ],
+
     ],
     'params' => $params,
 ];
