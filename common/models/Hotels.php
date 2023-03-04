@@ -12,7 +12,6 @@ use Yii;
  * @property string $description
  * @property int $phone_number
  * @property string|null $questions
- * @property string $city
  * @property string|null $lat_location
  * @property string|null $long_location
  * @property int|null $zip_code
@@ -50,11 +49,11 @@ class Hotels extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'description', 'phone_number', 'city', 'email', 'address'], 'required'],
+            [['name', 'description', 'phone_number', 'email', 'address'], 'required'],
             [['phone_number', 'zip_code'], 'integer'],
             [['questions'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
-            [['name', 'description', 'city', 'lat_location', 'long_location', 'country', 'email', 'website', 'address'], 'string', 'max' => 550],
+            [['name', 'description', 'lat_location', 'long_location', 'country', 'email', 'website', 'address'], 'string', 'max' => 550],
         ];
     }
 
@@ -69,14 +68,13 @@ class Hotels extends \yii\db\ActiveRecord
             'description' => 'Description',
             'phone_number' => 'Phone Number',
             'questions' => 'Questions',
-            'city' => 'City',
             'lat_location' => 'Lat Location',
             'long_location' => 'Long Location',
             'zip_code' => 'Zip Code',
             'country' => 'Country',
             'email' => 'Email',
             'website' => 'Website',
-            'address' => 'Address',
+            'address' => 'Hotel Location',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];

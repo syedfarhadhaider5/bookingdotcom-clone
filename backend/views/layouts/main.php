@@ -60,9 +60,9 @@ AppAsset::register($this);
                 <a class="nav-link" data-toggle="dropdown" href="#">
                     <img src="<?= Yii::$app->urlManager->createUrl('images/farhad.jpg') ?>" class="rounded-circle" alt="User Image" style="width: 30px; height: 30px; ">
                 </a>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <div class="dropdown-menu dropdown-menu-xl-start dropdown-menu-right">
                     <div class="dropdown-divider"></div>
-                    <a href="<?= Url::to(['sign-in/logout']);?>" data-method="post" class="dropdown-item">
+                    <a href="<?= Yii::$app->urlManager->createUrl('sign-in/logout') ?>" data-method="post" class="dropdown-item">
                          Logout
                     </a>
 

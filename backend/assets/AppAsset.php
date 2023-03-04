@@ -40,7 +40,9 @@ class AppAsset extends AssetBundle
         'plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js',
         'dist/js/adminlte.js',
         'dist/js/pages/dashboard.js',
-        'dist/js/demo.js'
+        'dist/js/demo.js',
+        'js/hotels.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

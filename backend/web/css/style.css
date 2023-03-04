@@ -28,3 +28,20 @@ body{
     color: #000000 !important;
     text-decoration: none;
 }
+.meals_checkbox{
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+.meals_checkbox label {
+    width: 33.33%;
+    box-sizing: border-box;
+}
+.facilities_checkbox{
+    display: flex !important;
+    flex-wrap: wrap;
+}
+.facilities_checkbox label {
+    width: 33.33%;
+    box-sizing: border-box;
+}
