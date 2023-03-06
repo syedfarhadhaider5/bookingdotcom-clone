@@ -89,6 +89,13 @@ class Hotels extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Facilities::class, ['id' => 'facility_id'])->viaTable('hotel_facility', ['hotel_id' => 'id']);
     }
+    /**
+     * Total Facilities [[Facilities]].
+     */
+    public function getTotalFacilities()
+    {
+        return $this->hasMany(Facilities::class, ['id' => 'facility_id'])->viaTable('hotel_facility', ['hotel_id' => 'id'])->count();
+    }
 
     /**
      * Gets query for [[HotelFacilities]].
@@ -99,7 +106,6 @@ class Hotels extends \yii\db\ActiveRecord
     {
         return $this->hasMany(HotelFacility::class, ['hotel_id' => 'id']);
     }
-
     /**
      * Gets query for [[HotelImages]].
      *
@@ -178,5 +184,13 @@ class Hotels extends \yii\db\ActiveRecord
     public function getMeals()
     {
         return $this->hasMany(Meals::class, ['id' => 'meal_id'])->viaTable('hotel_meal', ['hotel_id' => 'id']);
+    }
+    /**
+     * Total hotel count [[Meals]].
+     *
+     */
+    public function getTotalHotelMeals()
+    {
+        return $this->hasMany(Meals::class, ['id' => 'meal_id'])->viaTable('hotel_meal', ['hotel_id' => 'id'])->count();
     }
 }

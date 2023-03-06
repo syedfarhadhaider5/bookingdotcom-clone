@@ -12,6 +12,11 @@ use Yii;
 
 class HotelsController extends \yii\web\Controller
 {
+    public function actionIndex()
+    {
+        $model =  Hotels::find()->orderBy(['id' => 'DESC'])->all();
+        return $this->render('index', ['hotels' => $model]);
+    }
     public function actionCreate()
     {
         $model = new Hotels();
@@ -46,8 +51,8 @@ class HotelsController extends \yii\web\Controller
     }
     public function actionSaveStars($id)
     {
-        if(HotelStars::find(['hotel_id' => $id])->one()) {
-            $model = HotelStars::find(['hotel_id' => $id])->one();
+        if(HotelStars::find()->where(['hotel_id' => $id])->one()) {
+            $model = HotelStars::find()->where(['hotel_id' => $id])->one();
         }else{
             $model = new HotelStars();
         }        if ($model->load(Yii::$app->request->post())) {
@@ -59,8 +64,8 @@ class HotelsController extends \yii\web\Controller
     }
     public function actionSavePrice($id)
     {
-        if(HotelPrices::find(['hotel_id' => $id])->one()) {
-            $model = HotelPrices::find(['hotel_id' => $id])->one();
+        if(HotelPrices::find()->where(['hotel_id' => $id])->one()) {
+            $model = HotelPrices::find()->where(['hotel_id' => $id])->one();
         }else{
             $model = new HotelPrices();
         }
@@ -73,8 +78,8 @@ class HotelsController extends \yii\web\Controller
     }
     public function actionSaveRooms($id)
     {
-        if(HotelRoom::find(['hotel_id' => $id])->one()) {
-            $model = HotelRoom::find(['hotel_id' => $id])->one();
+        if(HotelRoom::find()->where(['hotel_id' => $id])->one()) {
+            $model = HotelRoom::find()->where(['hotel_id' => $id])->one();
         }else{
             $model = new HotelRoom();
         }

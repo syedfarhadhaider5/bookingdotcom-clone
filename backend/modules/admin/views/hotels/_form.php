@@ -70,13 +70,14 @@ $form = ActiveForm::begin()
     </div>
     <div class="card-body">
         <div class="row">
+            <div class="col-md-3"></div>
             <div class="col-md-6">
                 <?php echo $form->field($model, 'image_path')->textInput(['placeholder' => 'Image Link']) ?>
                 <div class="float-end">
                     <?php echo Html::submitButton('Save', ['class' => 'btn btn-block bg-gradient-info']) ?>
                 </div>
             </div>
-            <div class="col-md-6"></div>
+            <div class="col-md-3"></div>
         </div>
     </div>
 </div>
@@ -84,7 +85,7 @@ $form = ActiveForm::begin()
 }
     ActiveForm::end();
 if(\common\models\HotelRoom::find()->where(['hotel_id' => $id])->one()){
-    $model = \common\models\HotelRoom::find(['hotel_id' => $id])->one();
+    $model = \common\models\HotelRoom::find()->where(['hotel_id' => $id])->one();
 }else{
     $model = new \common\models\HotelRoom();
 }
@@ -104,7 +105,10 @@ if(\common\models\HotelRoom::find()->where(['hotel_id' => $id])->one()){
                <div class="badge bg-secondary">
                    <?php
                    if(isset($model)){
-                       echo \common\models\HotelRoom::find()->where(['hotel_id' => $id])->one()->total;
+                     $rooms =\common\models\HotelRoom::find()->where(['hotel_id' => $id])->one();;
+                     if(isset($rooms)){
+                         echo  $rooms->total;
+                     }
                    }
                    ?>
                </div>
@@ -113,13 +117,14 @@ if(\common\models\HotelRoom::find()->where(['hotel_id' => $id])->one()){
     </div>
     <div class="card-body">
         <div class="row">
+            <div class="col-md-3"></div>
             <div class="col-md-6">
-                <?php echo $form->field($model, 'total')->textInput(['placeholder' => 'Totel Room']) ?>
+                <?php echo $form->field($model, 'total')->textInput(['placeholder' => 'Totall Room']) ?>
                 <div class="float-end">
                     <?php echo Html::submitButton('Save', ['class' => 'btn btn-block bg-gradient-info']) ?>
                 </div>
             </div>
-            <div class="col-md-6"></div>
+            <div class="col-md-3"></div>
         </div>
     </div>
 </div>
@@ -127,7 +132,7 @@ if(\common\models\HotelRoom::find()->where(['hotel_id' => $id])->one()){
 }
 ActiveForm::end();
 if(\common\models\HotelStars::find()->where(['hotel_id' => $id])->one()){
-    $model = \common\models\HotelStars::find(['hotel_id' => $id])->one();
+    $model = \common\models\HotelStars::find()->where(['hotel_id' => $id])->one();
 }else{
     $model = new \common\models\HotelStars();
 }
@@ -156,6 +161,7 @@ if(isset($_GET['id'])){
         </div>
         <div class="card-body">
             <div class="row">
+                <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <?php echo $form->field($model, 'rank')->dropDownList([
                             'prompt' => '-- Select Hotel Stars --',
@@ -169,15 +175,15 @@ if(isset($_GET['id'])){
                         <?php echo Html::submitButton('Save', ['class' => 'btn btn-block bg-gradient-info']) ?>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
+                <div class="col-md-3"></div>
             </div>
         </div>
     </div>
     <?php
 }
 ActiveForm::end();
-if(\common\models\HotelPrices::find()->where(['id' => $id])->one()){
-    $model = \common\models\HotelPrices::find(['id' => $id])->one();
+if(\common\models\HotelPrices::find()->where(['hotel_id' => $id])->one()){
+    $model = \common\models\HotelPrices::find()->where(['hotel_id' => $id])->one();
 }else{
     $model = new \common\models\HotelPrices();
 }
@@ -210,13 +216,14 @@ if(isset($_GET['id'])){
         </div>
         <div class="card-body">
             <div class="row">
+                <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <?php echo $form->field($model, 'amount')->textInput(['placeholder' => 'Room Price']) ?>
                     <div class="float-end">
                         <?php echo Html::submitButton('Save', ['class' => 'btn btn-block bg-gradient-info']) ?>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
+                <div class="col-md-3"></div>
             </div>
         </div>
     </div>

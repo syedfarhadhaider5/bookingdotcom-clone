@@ -23,7 +23,10 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <?php $this->registerCsrfMetaTags() ?>
     <link rel="icon" href="<?= Yii::$app->urlManager->createUrl('images/logo/fvlogo.ico'); ?>" type="image/x-icon">
-
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <title><?= env('APP_TITLE') ?></title>
     <?php $this->head() ?>
 </head>

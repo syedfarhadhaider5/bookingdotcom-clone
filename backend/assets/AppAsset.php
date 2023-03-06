@@ -22,6 +22,9 @@ class AppAsset extends AssetBundle
         'plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
         'plugins/daterangepicker/daterangepicker.css',
         'plugins/summernote/summernote-bs4.css',
+        'plugins/datatables-bs4/css/dataTables.bootstrap4.min.css',
+        'plugins/datatables-responsive/css/responsive.bootstrap4.min.css',
+        'dist/css/adminlte.min.css',
 
     ];
     public $js = [
@@ -40,8 +43,13 @@ class AppAsset extends AssetBundle
         'plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js',
         'dist/js/adminlte.js',
         'dist/js/pages/dashboard.js',
+        'plugins/datatables/jquery.dataTables.min.js',
         'dist/js/demo.js',
         'js/hotels.js',
+        'plugins/datatables-bs4/js/dataTables.bootstrap4.min.js',
+        'plugins/datatables-responsive/js/dataTables.responsive.min.js',
+        'plugins/datatables-responsive/js/responsive.bootstrap4.min.js',
+        'dist/js/adminlte.min.js'
 
     ];
     public $depends = [

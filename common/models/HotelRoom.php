@@ -46,7 +46,7 @@ class HotelRoom extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'total' => 'Total',
+            'total' => 'Total Rooms',
             'hotel_id' => 'Hotel ID',
             'booked' => 'Booked',
             'available' => 'Available',
