@@ -149,14 +149,54 @@
                                             <i class="fa fa-edit"></i>
                                         </button>
                                     </a>
-                                    <a href="<?= Yii::$app->urlManager->createUrl('admin/hotels/remove?id=' . $hotel->id) ?>">
-                                        <button type="button" class="btn btn-xs  bg-gradient-danger">
+                                        <button type="button" class="btn btn-xs  bg-gradient-danger" data-toggle="modal" data-target="#hotal_modal_<?= $hotel->id ?>">
                                             <i class="fa fa-trash"></i>
                                         </button>
-                                    </a>
                                 </td>
                             </tr>
-                            <?php } ?>
+                            <?php ?>
+                                        <div class="modal fade" id="hotal_modal_<?= $hotel->id; ?>">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title text-red">Alert!</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="text-secondary fs-12"><span class="text-bold">Note:&nbsp;</span>This Hotel Has</div>
+                                                        <div class="text-secondary">Total Photos:&nbsp; <span class="text-red text-bold"><?= $hotel->getHotelImages()->count(); ?></span></div>
+                                                        <div class="text-secondary">Total Meals:&nbsp; <span class="text-red text-bold"><?= $hotel->getHotelMeals()->count(); ?></span></div>
+                                                        <div class="text-secondary">Total Facility:&nbsp; <span class="text-red text-bold"><?= $hotel->getHotelFacilities()->count(); ?></span></div>
+                                                        <div class="text-secondary">Total Room:&nbsp; <span class="text-red text-bold"><?php
+                                                                foreach ($hotel->getHotelRooms()->all() as $room){
+                                                                    echo $room->total;
+                                                                }
+                                                                if(!$hotel->getHotelRooms()->one()){
+                                                                       echo "0";
+                                                                }
+
+                                                                ?></span>
+                                                        </div>
+                                                        <div class="text-secondary fs-12"><span class="text-bold">Note:&nbsp;</span>When You Remove Hotel All data Associated with this Also Deleted.</div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <a href="<?= Yii::$app->urlManager->createUrl('admin/hotels/remove-hotel?id=' . $hotel->id) ?>">
+                                                            <button type="button" class="btn btn-primary">Yes</button>
+                                                        </a>
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
+                                    <?php
+                                    }
+                                    ?>
                             </tbody>
                         </table>
                     </div>

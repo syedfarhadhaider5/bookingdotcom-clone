@@ -133,4 +133,10 @@ class HotelsController extends \yii\web\Controller
         $hotelFacility->delete();
 
     }
+    public function actionRemoveHotel($id)
+    {
+        $hotels = Hotels::findOne($id);
+        $hotels->delete();
+        return $this->redirect('index');
+    }
 }
