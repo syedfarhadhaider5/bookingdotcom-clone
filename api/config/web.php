@@ -10,7 +10,7 @@ $params = array_merge(
 $config = [
     'id' => 'api',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'api2\controllers',
+    'controllerNamespace' => 'api\controllers',
     'defaultRoute' => 'site/index',
     'bootstrap' => ['log'],
     'modules' => [
@@ -46,7 +46,7 @@ $config = [
             ],
         ],
         'errorHandler' => [
-            'errorAction' => 'sign-in/error',
+            'errorAction' => 'site/error',
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,

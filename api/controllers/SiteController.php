@@ -15,20 +15,17 @@ class SiteController extends Controller
     }
     public function actionError()
     {
-        return [
-            'error' => "Error!!!!"
-        ];
-//        if (($exception = Yii::$app->getErrorHandler()->exception) === null) {
-//            $exception = new NotFoundHttpException('yii', 'Page not found.');
-//        }
-//
-//        if ($exception instanceof \HttpException) {
-//            Yii::$app->response->setStatusCode($exception->getCode());
-//        } else {
-//            Yii::$app->response->setStatusCode(500);
-//        }
-//
-//        return $this->asJson(['error' => $exception->getMessage(), 'code' => $exception->getCode()]);
+        if (($exception = Yii::$app->getErrorHandler()->exception) === null) {
+            $exception = new NotFoundHttpException('yii', 'Page not found.');
+        }
+
+        if ($exception instanceof \HttpException) {
+            Yii::$app->response->setStatusCode($exception->getCode());
+        } else {
+            Yii::$app->response->setStatusCode(500);
+        }
+
+        return $this->asJson(['error' => $exception->getMessage(), 'code' => $exception->getCode()]);
     }
     public function beforeAction($action)
     {
