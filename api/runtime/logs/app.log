@@ -6022,3 +6022,2965 @@ $_SERVER = [
     'DB_CHARSET' => 'utf8mb4'
     'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
 ]
+2023-03-07 15:48:44 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'model' in 'field list' in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT model as...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(18): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'model' in 'field list'
+The SQL being executed was: SELECT model as id, name FROM `hotels` WHERE `name` LIKE '%rama%' in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT model as...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT model as...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(18): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'model' in 'field list'
+)
+
+2023-03-07 15:48:44 [::1][-][-][info][application] $_GET = [
+    'q' => 'rama'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdOzMIRxj7Ze1l39E8gRwAAAAo'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdOzMIRxj7Ze1l39E8gRwAAAAo'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '10ac1485-5c38-4987-ad02-f146d34430e9'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '55891'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=rama'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=rama'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=rama'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678200524.3258
+    'REQUEST_TIME' => 1678200524
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 15:49:08 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hotels' in 'field list' in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT hotels a...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(18): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hotels' in 'field list'
+The SQL being executed was: SELECT hotels as id, name FROM `hotels` WHERE `name` LIKE '%rama%' in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT hotels a...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT hotels a...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(18): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'hotels' in 'field list'
+)
+
+2023-03-07 15:49:08 [::1][-][-][info][application] $_GET = [
+    'q' => 'rama'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdO5N1rQICpjERtISzr9wAAAAk'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdO5N1rQICpjERtISzr9wAAAAk'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8cd159f8-bee9-4da4-bef8-dd8d6aab3aa8'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '55986'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=rama'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=rama'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=rama'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678200548.1776
+    'REQUEST_TIME' => 1678200548
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 15:52:31 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'meals' in 'field list' in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT meals as...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(18): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'meals' in 'field list'
+The SQL being executed was: SELECT meals as id, name FROM `hotels` WHERE `name` LIKE '%rama%' in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT meals as...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT meals as...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(18): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'meals' in 'field list'
+)
+
+2023-03-07 15:52:31 [::1][-][-][info][application] $_GET = [
+    'q' => 'rama'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdPr4LjJVOkSMZVLRKYVQAAAAA'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdPr4LjJVOkSMZVLRKYVQAAAAA'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'dee48cb1-36f2-4c94-85ac-44c0a4ed6f30'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '56807'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=rama'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=rama'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=rama'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678200751.7259
+    'REQUEST_TIME' => 1678200751
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:21:37 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:21:37 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdWgU95H8_iRKkfXMH7-AAAAAU'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdWgU95H8_iRKkfXMH7-AAAAAU'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'b547029a-ffb1-4540-8228-475fbea6e460'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '63948'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202497.0308
+    'REQUEST_TIME' => 1678202497
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:22:13 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:22:13 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdWpd1rQICpjERtISzr_AAAAAk'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdWpd1rQICpjERtISzr_AAAAAk'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'c62319d9-2178-4e67-8b46-8d38ec8b3218'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '64095'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202533.3391
+    'REQUEST_TIME' => 1678202533
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:23:20 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:23:20 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdW6GLQLmIDdquNQxsMCwAAAAE'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdW6GLQLmIDdquNQxsMCwAAAAE'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '78218652-87e5-46b2-b7af-5405c4766f6c'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '64365'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202600.5831
+    'REQUEST_TIME' => 1678202600
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:23:50 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:23:50 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdXBsIRxj7Ze1l39E8gTQAAAAo'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdXBsIRxj7Ze1l39E8gTQAAAAo'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'df17ca88-635f-44f8-a06f-6c0689043141'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '64487'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202630.5172
+    'REQUEST_TIME' => 1678202630
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:23:52 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:23:52 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdXCImcvkIPKc1jOHfFSwAAAAY'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdXCImcvkIPKc1jOHfFSwAAAAY'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '9a5ef5e3-203b-40c0-9442-1c218fbb00d0'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '64493'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202632.1936
+    'REQUEST_TIME' => 1678202632
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:23:53 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:23:53 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdXCdMBH-X4DVmPOsAeNwAAAAc'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdXCdMBH-X4DVmPOsAeNwAAAAc'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '2de4bcf9-5eb6-4d2a-9802-9356744f85b2'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '64499'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202633.2791
+    'REQUEST_TIME' => 1678202633
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:23:54 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:23:54 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdXCk95H8_iRKkfXMH7-QAAAAU'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdXCk95H8_iRKkfXMH7-QAAAAU'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '250510fd-7ff3-4d02-aa11-8448ed7f06be'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '64505'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202634.2615
+    'REQUEST_TIME' => 1678202634
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:23:59 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:23:59 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdXD2LQLmIDdquNQxsMDAAAAAE'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdXD2LQLmIDdquNQxsMDAAAAAE'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '0e2fc88e-38bc-4a36-926a-6d68ff5fdaac'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '64531'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202639.4661
+    'REQUEST_TIME' => 1678202639
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:25:49 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:25:49 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdXfYLjJVOkSMZVLRKYWAAAAAA'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdXfYLjJVOkSMZVLRKYWAAAAAA'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '9799c2d3-7b40-4c08-a121-a17465f1b45a'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '64973'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202749.7837
+    'REQUEST_TIME' => 1678202749
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:26:14 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:26:14 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdXlsIRxj7Ze1l39E8gTgAAAAo'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdXlsIRxj7Ze1l39E8gTgAAAAo'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8074eb5e-4a28-4c61-92da-452f11c2620e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '65075'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202774.9627
+    'REQUEST_TIME' => 1678202774
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:27:27 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:27:27 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdX391rQICpjERtISzr_QAAAAk'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdX391rQICpjERtISzr_QAAAAk'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f61ec883-ad8a-45b4-b45c-a3e49752d84a'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '65365'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202847.1701
+    'REQUEST_TIME' => 1678202847
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:27:38 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:27:38 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdX6secuUIQ11QwAxph-gAAAAg'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdX6secuUIQ11QwAxph-gAAAAg'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f31ac92d-8183-4787-b1e7-a9caf70b27f9'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '65411'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202858.8642
+    'REQUEST_TIME' => 1678202858
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:28:20 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:28:20 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdYFGLQLmIDdquNQxsMDQAAAAE'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdYFGLQLmIDdquNQxsMDQAAAAE'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '0227d576-e7a5-4869-9951-694ed019c58c'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '49199'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202900.9583
+    'REQUEST_TIME' => 1678202900
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:29:59 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:29:59 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdYd4LjJVOkSMZVLRKYWQAAAAA'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdYd4LjJVOkSMZVLRKYWQAAAAA'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'eff5d478-0d6d-472b-96be-90f6dadbf0f6'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '49597'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678202999.6162
+    'REQUEST_TIME' => 1678202999
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:30:17 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:30:17 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdYiU95H8_iRKkfXMH7-gAAAAU'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdYiU95H8_iRKkfXMH7-gAAAAU'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'a10a12c1-1696-4c2d-b510-5dfdb5cb781a'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '49667'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678203017.3212
+    'REQUEST_TIME' => 1678203017
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:32:09 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:32:09 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdY-cIRxj7Ze1l39E8gTwAAAAo'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdY-cIRxj7Ze1l39E8gTwAAAAo'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'b5bdaad3-3fa9-4806-a16d-faca70efe080'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '50138'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678203129.6124
+    'REQUEST_TIME' => 1678203129
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:32:10 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:32:10 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdY-t1rQICpjERtISzr_gAAAAk'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdY-t1rQICpjERtISzr_gAAAAk'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '76a3a271-7c90-49c6-9b57-1134f9e569c5'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '50144'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678203130.6011
+    'REQUEST_TIME' => 1678203130
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:32:11 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:32:11 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdY-9MBH-X4DVmPOsAeOAAAAAc'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdY-9MBH-X4DVmPOsAeOAAAAAc'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'ace1192f-2e50-4f27-af94-b8c9405beb55'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '50150'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678203131.5817
+    'REQUEST_TIME' => 1678203131
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:32:20 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:32:20 [::1][-][-][info][application] $_GET = [
+    'q' => 'ramada'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdZBGLQLmIDdquNQxsMDgAAAAE'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdZBGLQLmIDdquNQxsMDgAAAAE'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8a10b71f-4d43-4152-837a-585ed686c68e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '50188'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=ramada'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=ramada'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=ramada'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678203140.9148
+    'REQUEST_TIME' => 1678203140
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:32:22 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:17
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(17): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 17, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 16:32:21 [::1][-][-][info][application] $_GET = [
+    'q' => 'ramada'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdZBcecuUIQ11QwAxph-wAAAAg'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdZBcecuUIQ11QwAxph-wAAAAg'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e3bf28bf-d4dc-4616-a955-a334c204ac8c'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '50194'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=ramada'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=ramada'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=ramada'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678203141.9634
+    'REQUEST_TIME' => 1678203141
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:38:06 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: count(): Parameter must be an array or an object that implements Countable in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:18
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'count(): Parame...', '/Applications/X...', 18, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(18): count(Object(yii\db\ActiveQuery))
+#2 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#9 {main}
+2023-03-07 16:38:06 [::1][-][-][info][application] $_GET = [
+    'q' => 'ramada'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdaXlg2rOSYulZrMrp9vwAAAAM'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdaXlg2rOSYulZrMrp9vwAAAAM'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '2541e4b3-0f55-401e-b792-53bf25e078d1'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '51598'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=ramada'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=ramada'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=ramada'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678203486.5628
+    'REQUEST_TIME' => 1678203486
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:38:23 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: count(): Parameter must be an array or an object that implements Countable in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:18
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'count(): Parame...', '/Applications/X...', 18, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(18): count(Object(yii\db\ActiveQuery))
+#2 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#9 {main}
+2023-03-07 16:38:23 [::1][-][-][info][application] $_GET = [
+    'q' => 'ramada'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdab095H8_iRKkfXMH7-wAAAAU'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdab095H8_iRKkfXMH7-wAAAAU'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '2c328cbe-e1eb-441a-8d02-ab9c05189843'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '51666'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=ramada'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=ramada'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=ramada'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678203503.3403
+    'REQUEST_TIME' => 1678203503
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 16:48:01 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column ' country, id,' in 'field list' in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT ` countr...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(18): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column ' country, id,' in 'field list'
+The SQL being executed was: SELECT ` country, id,` AS `name` FROM `hotels` WHERE `name` LIKE '%ramada%' in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT ` countr...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT ` countr...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(18): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column ' country, id,' in 'field list'
+)
+
+2023-03-07 16:48:01 [::1][-][-][info][application] $_GET = [
+    'q' => 'ramada'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdcsYLjJVOkSMZVLRKYWgAAAAA'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdcsYLjJVOkSMZVLRKYWgAAAAA'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e150ac84-46e5-4d20-a0d3-1353c18706cb'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '54018'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=ramada'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=ramada'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=ramada'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678204081.1996
+    'REQUEST_TIME' => 1678204081
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 17:42:10 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:18
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\ver...')
+#1 [internal function]: spl_autoload_call('api\\modules\\ver...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(661): class_exists('api\\modules\\ver...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID('hotel')
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(612): yii\base\Module->createController('search')
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController('hotel/search')
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#9 {main}
+2023-03-07 17:42:10 [::1][-][-][info][application] $_GET = [
+    'q' => 'united'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdpYk95H8_iRKkfXMH7_gAAAAU'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdpYk95H8_iRKkfXMH7_gAAAAU'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8eb0aad2-15d2-4da4-8ec3-2026b1f2d52b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '56207'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=united'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=united'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=united'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678207330.8815
+    'REQUEST_TIME' => 1678207330
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 17:42:38 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:18
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\ver...')
+#1 [internal function]: spl_autoload_call('api\\modules\\ver...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(661): class_exists('api\\modules\\ver...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID('hotel')
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(612): yii\base\Module->createController('search')
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController('hotel/search')
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#9 {main}
+2023-03-07 17:42:38 [::1][-][-][info][application] $_GET = [
+    'q' => 'united'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdpflg2rOSYulZrMrp9wAAAAAM'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdpflg2rOSYulZrMrp9wAAAAAM'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'bfe3a557-a08f-4e3d-bc32-262727c85ea7'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '56317'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=united'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=united'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=united'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678207358.0976
+    'REQUEST_TIME' => 1678207358
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 17:42:42 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:18
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('api\\modules\\ver...')
+#1 [internal function]: spl_autoload_call('api\\modules\\ver...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(661): class_exists('api\\modules\\ver...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(620): yii\base\Module->createControllerByID('hotel')
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(612): yii\base\Module->createController('search')
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(546): yii\base\Module->createController('hotel/search')
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#9 {main}
+2023-03-07 17:42:42 [::1][-][-][info][application] $_GET = [
+    'q' => 'pak'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdpgmLQLmIDdquNQxsMEAAAAAE'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdpgmLQLmIDdquNQxsMEAAAAAE'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '71b747eb-41f9-415f-a082-8c5790aef5dc'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '56339'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=pak'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=pak'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=pak'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678207362.1872
+    'REQUEST_TIME' => 1678207362
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 17:53:52 [::1][-][-][error][yii\base\ErrorException:2] yii\base\ErrorException: count(): Parameter must be an array or an object that implements Countable in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:30
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'count(): Parame...', '/Applications/X...', 30, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(30): count(Object(yii\db\ActiveQuery))
+#2 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#9 {main}
+2023-03-07 17:53:52 [::1][-][-][info][application] $_GET = [
+    'q' => 'united'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdsIN1rQICpjERtISzsAQAAAAk'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdsIN1rQICpjERtISzsAQAAAAk'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '3bb92c1e-9800-4332-8da0-2544bb653f38'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59025'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=united'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=united'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=united'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678208032.1609
+    'REQUEST_TIME' => 1678208032
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 17:57:33 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'LIKE' requires two operands. in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/conditions/LikeCondition.php:68
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1606): yii\db\conditions\LikeCondition::fromArrayDefinition('LIKE', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(24): yii\db\ActiveQuery->all()
+#8 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#15 {main}
+2023-03-07 17:57:33 [::1][-][-][info][application] $_GET = [
+    'q' => 'united'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAds_cIRxj7Ze1l39E8gVgAAAAo'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAds_cIRxj7Ze1l39E8gVgAAAAo'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8df7bb6d-5299-4f66-8c5c-661fa30c84ca'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59945'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=united'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=united'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=united'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678208253.8825
+    'REQUEST_TIME' => 1678208253
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 17:58:13 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'LIKE' requires two operands. in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/conditions/LikeCondition.php:68
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1606): yii\db\conditions\LikeCondition::fromArrayDefinition('LIKE', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(24): yii\db\ActiveQuery->all()
+#8 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#15 {main}
+2023-03-07 17:58:13 [::1][-][-][info][application] $_GET = [
+    'q' => 'united'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdtJTHRByURuIXbK7UgVAAAAAI'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdtJTHRByURuIXbK7UgVAAAAAI'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'ed59e375-6e34-47cf-8e3e-e8b81786b44b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '60108'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=united'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=united'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=united'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678208293.7506
+    'REQUEST_TIME' => 1678208293
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 17:59:45 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'LIKE' requires two operands. in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/conditions/LikeCondition.php:68
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1606): yii\db\conditions\LikeCondition::fromArrayDefinition('LIKE', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(24): yii\db\ActiveQuery->all()
+#8 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#15 {main}
+2023-03-07 17:59:45 [::1][-][-][info][application] $_GET = [
+    'q' => 'pak'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdtgYLjJVOkSMZVLRKYYQAAAAA'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdtgYLjJVOkSMZVLRKYYQAAAAA'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'af4e1cb6-3de5-46e2-af62-3c7adac489cc'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '60480'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=pak'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=pak'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=pak'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678208385.2309
+    'REQUEST_TIME' => 1678208385
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 18:00:17 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'LIKE' requires two operands. in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/conditions/LikeCondition.php:68
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1606): yii\db\conditions\LikeCondition::fromArrayDefinition('LIKE', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(24): yii\db\ActiveQuery->all()
+#8 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#15 {main}
+2023-03-07 18:00:17 [::1][-][-][info][application] $_GET = [
+    'q' => 'pak'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdtoYmcvkIPKc1jOHfFTwAAAAY'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdtoYmcvkIPKc1jOHfFTwAAAAY'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8b7a4588-691d-41de-bb81-8586bcab8b96'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '60615'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=pak'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=pak'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=pak'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678208417.7074
+    'REQUEST_TIME' => 1678208417
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 18:00:26 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'LIKE' requires two operands. in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/conditions/LikeCondition.php:68
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1606): yii\db\conditions\LikeCondition::fromArrayDefinition('LIKE', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(24): yii\db\ActiveQuery->all()
+#8 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#15 {main}
+2023-03-07 18:00:26 [::1][-][-][info][application] $_GET = [
+    'q' => 'pak'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAdtqsIRxj7Ze1l39E8gVwAAAAo'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAdtqsIRxj7Ze1l39E8gVwAAAAo'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '4f7e6902-760f-4646-8d86-3b07f9f21ba2'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '60650'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=pak'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=pak'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=pak'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678208426.3616
+    'REQUEST_TIME' => 1678208426
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 18:02:40 [::1][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Operator 'LIKE' requires two operands. in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/conditions/LikeCondition.php:68
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1606): yii\db\conditions\LikeCondition::fromArrayDefinition('LIKE', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1576): yii\db\QueryBuilder->createConditionFromArray(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/conditions/ConjunctionConditionBuilder.php(60): yii\db\QueryBuilder->buildCondition(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/conditions/ConjunctionConditionBuilder.php(35): yii\db\conditions\ConjunctionConditionBuilder->buildExpressionsFrom(Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(288): yii\db\conditions\ConjunctionConditionBuilder->build(Object(yii\db\conditions\AndCondition), Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1580): yii\db\QueryBuilder->buildExpression(Object(yii\db\conditions\AndCondition), Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(1357): yii\db\QueryBuilder->buildCondition(Object(yii\db\conditions\AndCondition), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/QueryBuilder.php(235): yii\db\QueryBuilder->buildWhere(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(328): yii\db\QueryBuilder->build(Object(yii\db\Query))
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(28): yii\db\ActiveQuery->all()
+#12 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#13 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#16 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#17 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#19 {main}
+2023-03-07 18:02:40 [::1][-][-][info][application] $_GET = [
+    'q' => 'pak'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAduMFg2rOSYulZrMrp9xQAAAAM'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAduMFg2rOSYulZrMrp9xQAAAAM'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'bc4528f9-06ed-49af-b0ca-d250640a2667'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '61201'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=pak'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=pak'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=pak'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678208560.3235
+    'REQUEST_TIME' => 1678208560
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 18:38:58 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: result in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:36
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(36): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/Applications/X...', 36, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-07 18:38:58 [::1][-][-][info][application] $_GET = [
+    'q' => 'pak'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAd2slg2rOSYulZrMrp9yAAAAAM'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAd2slg2rOSYulZrMrp9yAAAAAM'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '78e3797c-d665-47c4-a1ab-64c763b4b7a1'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '53782'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=pak'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=pak'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=pak'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678210738.0087
+    'REQUEST_TIME' => 1678210738
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 18:39:43 [::1][-][-][error][Error] Error: Class 'api\modules\version1\controllers\Hotels' not found in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:23
+Stack trace:
+#0 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#7 {main}
+2023-03-07 18:39:43 [::1][-][-][info][application] $_GET = [
+    'q' => 'country:'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAd234mcvkIPKc1jOHfFUwAAAAY'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAd234mcvkIPKc1jOHfFUwAAAAY'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '1916b572-e0c9-4777-b91d-65596d8e60d7'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '53955'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=country:'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=country:'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=country:'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678210783.3734
+    'REQUEST_TIME' => 1678210783
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-07 19:38:24 [::1][-][-][error][Error] Error: Class 'api\modules\version1\controllers\Expression' not found in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:44
+Stack trace:
+#0 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#7 {main}
+2023-03-07 19:38:24 [::1][-][-][info][application] $_GET = [
+    'q' => 'pak'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAeEoILjJVOkSMZVLRKYZgAAAAA'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAeEoILjJVOkSMZVLRKYZgAAAAA'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'bd6f342d-8309-494b-b6ee-879e441c9a15'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '51770'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=pak'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=pak'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=pak'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678214304.7373
+    'REQUEST_TIME' => 1678214304
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-08 04:12:30 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:23
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(23): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 23, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-08 04:12:30 [::1][-][-][info][application] $_GET = [
+    'q' => 'usa'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAf9HoLjJVOkSMZVLRKYbQAAAAA'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAf9HoLjJVOkSMZVLRKYbQAAAAA'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'c227ccfc-cb1b-4171-8165-852832aa1826'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59077'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=usa'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=usa'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=usa'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678245150.9261
+    'REQUEST_TIME' => 1678245150
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-08 04:13:30 [::1][-][-][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:23
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(23): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Applications/X...', 23, Array)
+#1 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#8 {main}
+2023-03-08 04:13:30 [::1][-][-][info][application] $_GET = [
+    'q' => 'usa'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZAf9WsecuUIQ11QwAxpiBwAAAAg'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZAf9WsecuUIQ11QwAxpiBwAAAAg'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '70b47f9f-0b72-4183-88b7-67eb81dcef3e'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59322'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=usa'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=usa'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=usa'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1678245210.7767
+    'REQUEST_TIME' => 1678245210
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
