@@ -40,5 +40,6 @@ tests/codeception/*/_support/_generated/*
 # Images
 api/web/documents
 /backend/runtime/
+/api/runtime/
 /backend/runtime/debug/index.data
 composer.lock
