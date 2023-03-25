@@ -21,7 +21,8 @@ use Yii;
  * @property string $address
  * @property string $created_at
  * @property string $updated_at
- *
+ * @property string $country_slug
+ * @property string $name_slug
  * @property Facilities[] $facilities
  * @property HotelFacility[] $hotelFacilities
  * @property HotelImages[] $hotelImages
@@ -49,11 +50,13 @@ class Hotels extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'description', 'phone_number', 'email', 'address'], 'required'],
+            [['name', 'description', 'phone_number', 'email', 'address', 'country_slug', 'name_slug'], 'required'],
             [['phone_number', 'zip_code'], 'integer'],
             [['questions'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['name', 'description', 'lat_location', 'long_location', 'country', 'email', 'website', 'address'], 'string', 'max' => 550],
+            [['phone_number', 'country_slug', 'name_slug'], 'string', 'max' => 255],
+
         ];
     }
 
@@ -77,6 +80,8 @@ class Hotels extends \yii\db\ActiveRecord
             'address' => 'Hotel Location',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'country_slug' => 'Country Slug',
+            'name_slug' => 'Name Slug',
         ];
     }
 

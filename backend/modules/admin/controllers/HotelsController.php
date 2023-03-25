@@ -17,10 +17,31 @@ class HotelsController extends \yii\web\Controller
         $model =  Hotels::find()->orderBy(['id' => 'DESC'])->all();
         return $this->render('index', ['hotels' => $model]);
     }
+    public function slugify($text) {
+        // Convert the string to lowercase
+        $text = strtolower($text);
+
+        // Replace non-alphanumeric characters with a separator
+        $text = preg_replace('/[^a-z0-9]+/', '-', $text);
+
+        // Remove any leading or trailing separator
+        $text = trim($text, '-');
+
+        return $text;
+    }
     public function actionCreate()
     {
         $model = new Hotels();
         if ($model->load(Yii::$app->request->post())) {
+
+            $country = $_POST['Hotels']['country'];
+            $name = $_POST['Hotels']['name'];
+            $countrySlug = $this->slugify($country);
+            $nameSlug = $this->slugify($name);
+
+            $model->country_slug = $countrySlug;
+            $model->name_slug = $nameSlug;
+
             if ($model->save()) {
                 $id = $model->getPrimaryKey();
                 return $this->redirect('update?id=' . $id);
@@ -33,12 +54,21 @@ class HotelsController extends \yii\web\Controller
     {
         $model = Hotels::findOne($id);
         if ($model->load(Yii::$app->request->post())) {
+            $country = $_POST['Hotels']['country'];
+            $name = $_POST['Hotels']['name'];
+
+            $countrySlug = $this->slugify($country);
+            $nameSlug = $this->slugify($name);
+
+            $model->country_slug = $countrySlug;
+            $model->name_slug = $nameSlug;
             if ($model->save()) {
                 return $this->redirect('update?id=' . $id);
             }
         }
         return $this->render('update', ['model' => $model]);
     }
+
     public function actionSaveImage($id)
     {
         $model = new HotelImages();
