@@ -9262,3 +9262,901 @@ $_SERVER = [
     'DB_CHARSET' => 'utf8mb4'
     'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
 ]
+2023-03-25 13:26:10 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels`...' at line 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels`...' at line 1
+The SQL being executed was: SELECT IF(country LIKE '%al%', id, country, NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels` WHERE (`country` LIKE '%al%') OR (`name` LIKE '%al%') LIMIT 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT IF(count...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels`...' at line 1
+)
+
+2023-03-25 13:26:10 [::1][-][-][info][application] $_GET = [
+    'q' => 'al'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZB7oYnkNbLx3FOf3pxx2UwAAAAs'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZB7oYnkNbLx3FOf3pxx2UwAAAAs'
+    'HTTP_ACCESS_CONTROL_ALLOW_ORIGIN' => 'http://localhost:3000'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '87f1af36-1e6c-423a-b4a2-2d48317cc610'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59969'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=al'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=al'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=al'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1679747170.5772
+    'REQUEST_TIME' => 1679747170
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-25 13:26:39 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels`...' at line 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels`...' at line 1
+The SQL being executed was: SELECT IF(country LIKE '%al%',country,id, NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels` WHERE (`country` LIKE '%al%') OR (`name` LIKE '%al%') LIMIT 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT IF(count...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels`...' at line 1
+)
+
+2023-03-25 13:26:39 [::1][-][-][info][application] $_GET = [
+    'q' => 'al'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZB7of0qyVpEZegXJ_XcicAAAAAE'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZB7of0qyVpEZegXJ_XcicAAAAAE'
+    'HTTP_ACCESS_CONTROL_ALLOW_ORIGIN' => 'http://localhost:3000'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'a75e457a-d1d2-4d18-bec0-c1ee4fc9c66d'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59973'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=al'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=al'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=al'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1679747199.0231
+    'REQUEST_TIME' => 1679747199
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-25 13:27:43 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, IF(name LIKE ...' at line 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(26): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, IF(name LIKE ...' at line 1
+The SQL being executed was: SELECT IF(country LIKE '%al%',country NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, IF(name LIKE '%al%', id, NULL) AS `id` FROM `hotels` WHERE (`country` LIKE '%al%') OR (`name` LIKE '%al%') LIMIT 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT IF(count...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(26): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, IF(name LIKE ...' at line 1
+)
+
+2023-03-25 13:27:43 [::1][-][-][info][application] $_GET = [
+    'q' => 'al'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZB7ov_Xh5gTPc1HTQ88TtwAAAAI'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZB7ov_Xh5gTPc1HTQ88TtwAAAAI'
+    'HTTP_ACCESS_CONTROL_ALLOW_ORIGIN' => 'http://localhost:3000'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '31e03e52-bec4-4060-ad03-6deaef723b9b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59976'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=al'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=al'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=al'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1679747263.0934
+    'REQUEST_TIME' => 1679747263
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-25 13:27:52 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, IF(id LIKE '%...' at line 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(26): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, IF(id LIKE '%...' at line 1
+The SQL being executed was: SELECT IF(country LIKE '%al%',country NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, IF(id LIKE '%al%', id, NULL) AS `id` FROM `hotels` WHERE (`country` LIKE '%al%') OR (`name` LIKE '%al%') LIMIT 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT IF(count...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(26): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, IF(id LIKE '%...' at line 1
+)
+
+2023-03-25 13:27:52 [::1][-][-][info][application] $_GET = [
+    'q' => 'al'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZB7oyJvKR9u8uWJpQOcjxwAAAAg'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZB7oyJvKR9u8uWJpQOcjxwAAAAg'
+    'HTTP_ACCESS_CONTROL_ALLOW_ORIGIN' => 'http://localhost:3000'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7548d56d-63b2-46ce-8574-e546ec538005'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59979'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=al'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=al'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=al'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1679747272.3931
+    'REQUEST_TIME' => 1679747272
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-25 13:28:01 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, `id` FROM `ho...' at line 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(26): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, `id` FROM `ho...' at line 1
+The SQL being executed was: SELECT IF(country LIKE '%al%',country NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, `id` FROM `hotels` WHERE (`country` LIKE '%al%') OR (`name` LIKE '%al%') LIMIT 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT IF(count...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(26): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name`, `id` FROM `ho...' at line 1
+)
+
+2023-03-25 13:28:01 [::1][-][-][info][application] $_GET = [
+    'q' => 'al'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZB7o0bkpXZMiY7KNvxXT2wAAAAk'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZB7o0bkpXZMiY7KNvxXT2wAAAAk'
+    'HTTP_ACCESS_CONTROL_ALLOW_ORIGIN' => 'http://localhost:3000'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'b497e5a8-25d4-457a-ad4d-a51cf4ef714b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59982'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=al'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=al'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=al'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1679747281.0863
+    'REQUEST_TIME' => 1679747281
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-25 13:28:19 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels` ...' at line 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels` ...' at line 1
+The SQL being executed was: SELECT IF(country LIKE '%al%',country NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels` WHERE (`country` LIKE '%al%') OR (`name` LIKE '%al%') LIMIT 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT IF(count...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels` ...' at line 1
+)
+
+2023-03-25 13:28:19 [::1][-][-][info][application] $_GET = [
+    'q' => 'al'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZB7o41LkqU1QuB3J-dSnUwAAAAY'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZB7o41LkqU1QuB3J-dSnUwAAAAY'
+    'HTTP_ACCESS_CONTROL_ALLOW_ORIGIN' => 'http://localhost:3000'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '55860f4d-d66b-40aa-85d9-488fd0abeec4'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59985'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=al'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=al'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=al'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1679747299.3586
+    'REQUEST_TIME' => 1679747299
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-25 13:28:23 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels` ...' at line 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels` ...' at line 1
+The SQL being executed was: SELECT IF(country LIKE '%al%',country NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels` WHERE (`country` LIKE '%al%') OR (`name` LIKE '%al%') LIMIT 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT IF(count...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%al%', name, NULL) AS `name` FROM `hotels` ...' at line 1
+)
+
+2023-03-25 13:28:23 [::1][-][-][info][application] $_GET = [
+    'q' => 'al'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZB7o5yJ8rGYWdTZ0me33yAAAAAQ'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZB7o5yJ8rGYWdTZ0me33yAAAAAQ'
+    'HTTP_ACCESS_CONTROL_ALLOW_ORIGIN' => 'http://localhost:3000'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'eb389c2a-03cf-43db-afe8-2dda1d350848'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59988'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=al'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=al'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=al'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1679747303.8884
+    'REQUEST_TIME' => 1679747303
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-25 13:28:32 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%azur%', name, NULL) AS `name` FROM `hotels...' at line 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%azur%', name, NULL) AS `name` FROM `hotels...' at line 1
+The SQL being executed was: SELECT IF(country LIKE '%azur%',country NULL) AS `country`, IF(name LIKE '%azur%', name, NULL) AS `name` FROM `hotels` WHERE (`country` LIKE '%azur%') OR (`name` LIKE '%azur%') LIMIT 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT IF(count...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%azur%', name, NULL) AS `name` FROM `hotels...' at line 1
+)
+
+2023-03-25 13:28:32 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZB7o8FH03mIpSHKMgC7oDQAAAAM'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZB7o8FH03mIpSHKMgC7oDQAAAAM'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '4dfa6be3-4148-4457-a3d9-e6d3327778df'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59991'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1679747312.9326
+    'REQUEST_TIME' => 1679747312
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-25 13:28:54 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%azur%', name, NULL) AS `name` FROM `hotels...' at line 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%azur%', name, NULL) AS `name` FROM `hotels...' at line 1
+The SQL being executed was: SELECT IF(country LIKE '%azur%',country NULL) AS `country`, IF(name LIKE '%azur%', name, NULL) AS `name` FROM `hotels` WHERE (`country` LIKE '%azur%') OR (`name` LIKE '%azur%') LIMIT 1 in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException(Object(PDOException), 'SELECT IF(count...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(1168): yii\db\Command->internalExecute('SELECT IF(count...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Command.php(410): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/Query.php(249): yii\db\Command->queryAll()
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php(25): yii\db\ActiveQuery->all()
+#6 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#7 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#10 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42000
+    [1] => 1064
+    [2] => You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'NULL) AS `country`, IF(name LIKE '%azur%', name, NULL) AS `name` FROM `hotels...' at line 1
+)
+
+2023-03-25 13:28:54 [::1][-][-][info][application] $_GET = [
+    'q' => 'azur'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZB7pBnkNbLx3FOf3pxx2VAAAAAs'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZB7pBnkNbLx3FOf3pxx2VAAAAAs'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/7.29.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'a0119ca3-4ed3-4ed1-ba16-aad00d7c021b'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '59994'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=azur'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=azur'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=azur'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1679747334.166
+    'REQUEST_TIME' => 1679747334
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]

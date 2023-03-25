@@ -20,7 +20,7 @@ class HotelController extends ActiveController
             ->orWhere(['like', 'name', $searchTerm]);
 
         // only select columns that match the search term
-        $result =   $query->select(['country' => new Expression("IF(country LIKE '%{$searchTerm}%', country, NULL)"),
+        $result =   $query->select(['id','country' => new Expression("IF(country LIKE '%{$searchTerm}%', country, NULL)"),
             'name' => new Expression("IF(name LIKE '%{$searchTerm}%', name, NULL)"),
             ])->all();
 
