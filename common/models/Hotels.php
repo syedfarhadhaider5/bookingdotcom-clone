@@ -23,6 +23,7 @@ use Yii;
  * @property string $updated_at
  * @property string $country_slug
  * @property string $name_slug
+ * @property int|null $is_enabled
  * @property Facilities[] $facilities
  * @property HotelFacility[] $hotelFacilities
  * @property HotelImages[] $hotelImages
@@ -51,7 +52,7 @@ class Hotels extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'description', 'phone_number', 'email', 'address', 'country_slug', 'name_slug'], 'required'],
-            [['phone_number', 'zip_code'], 'integer'],
+            [['phone_number', 'zip_code','is_enabled'], 'integer'],
             [['questions'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['name', 'description', 'lat_location', 'long_location', 'country', 'email', 'website', 'address'], 'string', 'max' => 550],
@@ -82,6 +83,7 @@ class Hotels extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
             'country_slug' => 'Country Slug',
             'name_slug' => 'Name Slug',
+            'is_enabled' => 'Is Enabled',
         ];
     }
 
