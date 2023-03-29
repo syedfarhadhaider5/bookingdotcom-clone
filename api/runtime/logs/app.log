@@ -10471,3 +10471,151 @@ $_SERVER = [
     'DB_CHARSET' => 'utf8mb4'
     'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
 ]
+2023-03-29 18:41:12 [::1][-][-][error][Error] Error: Call to a member function limit() on array in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:25
+Stack trace:
+#0 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#7 {main}
+2023-03-29 18:41:12 [::1][-][-][info][application] $_GET = [
+    'q' => 'usa'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZCRqKJBt7c_SW8kTj7WNIgAAAAI'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZCRqKJBt7c_SW8kTj7WNIgAAAAI'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"111\", \"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"111\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"macOS\"'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://localhost:3000'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3000/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '64216'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=usa'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=usa'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=usa'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1680108072.5144
+    'REQUEST_TIME' => 1680108072
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]
+2023-03-29 18:41:29 [::1][-][-][error][Error] Error: Call to a member function limit() on array in /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/modules/version1/controllers/HotelController.php:25
+Stack trace:
+#0 [internal function]: api\modules\version1\controllers\HotelController->actionSearch()
+#1 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams(Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('search', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('version1/hotel/...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php(21): yii\base\Application->run()
+#7 {main}
+2023-03-29 18:41:29 [::1][-][-][info][application] $_GET = [
+    'q' => 'usa'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'REDIRECT_UNIQUE_ID' => 'ZCRqOau_Qld05ddQwJeBbwAAAAY'
+    'REDIRECT_STATUS' => '200'
+    'UNIQUE_ID' => 'ZCRqOau_Qld05ddQwJeBbwAAAAY'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"111\", \"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"111\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"macOS\"'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ORIGIN' => 'http://localhost:3000'
+    'HTTP_SEC_FETCH_SITE' => 'same-site'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:3000/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.53 (Unix) OpenSSL/1.1.1o PHP/7.4.29 mod_perl/2.0.12 Perl/v5.34.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/bookingdotcom-clone/api/web/index.php'
+    'REMOTE_PORT' => '64258'
+    'REDIRECT_URL' => '/bookingdotcom-clone/api/web/version1/hotel/search'
+    'REDIRECT_QUERY_STRING' => 'q=usa'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'q=usa'
+    'REQUEST_URI' => '/bookingdotcom-clone/api/web/version1/hotel/search?q=usa'
+    'SCRIPT_NAME' => '/bookingdotcom-clone/api/web/index.php'
+    'PHP_SELF' => '/bookingdotcom-clone/api/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1680108089.2937
+    'REQUEST_TIME' => 1680108089
+    'YII_DEBUG' => 'true'
+    'YII_ENV' => 'test'
+    'APP_TITLE' => 'Booking'
+    'DB_DSN' => 'mysql:host=127.0.0.1;port=3306;dbname=yii2-advanced-db'
+    'DB_USERNAME' => 'root'
+    'DB_PASSWORD' => ''
+    'DB_TABLE_PREFIX' => ''
+    'DB_CHARSET' => 'utf8mb4'
+    'GOOGLE_PLACE_API' => 'AIzaSyAK2R5PtFz5mPVVj8PmQbCNZJzwAQHD1QA'
+]

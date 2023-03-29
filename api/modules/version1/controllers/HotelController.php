@@ -11,18 +11,17 @@ class HotelController extends ActiveController
 
     public function actionSearch()
     {
-
         $searchTerm = \Yii::$app->request->get('q');
-       // $searchTerm = explode(' ', $searchTerm);
-
         $query = Hotels::find();
-        $query->where(['like', 'country', $searchTerm])->limit(1)
-            ->orWhere(['like', 'name', $searchTerm]);
-
-        // only select columns that match the search term
-        $result =   $query->select(['id','country' => new Expression("IF(country LIKE '%{$searchTerm}%', country, NULL)"),
-            'name' => new Expression("IF(name LIKE '%{$searchTerm}%', name, NULL)"),
-            ])->all();
+        $query->where(['like', 'country', $searchTerm])
+            ->limit(1);
+        $countryResults = $query->select(['id','country' => new Expression("IF(country LIKE '%{$searchTerm}%', country, NULL)")])->all();
+        $query = Hotels::find();
+        $query->where(['like', 'name', $searchTerm])
+            ->limit(5);
+        $nameResults = $query->select(['id','name' => new Expression("IF(name LIKE '%{$searchTerm}%', name, NULL)")])->all();
+        // Merge the results
+        $result = array_merge($countryResults, $nameResults);
 
         if (count($result) > 0) {
             return $result;
