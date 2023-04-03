@@ -13,7 +13,7 @@ class Hotel extends \common\models\Hotels implements Linkable
 {
     public function extraFields()
     {
-        return ['hotelImages','hotelRooms','hotelStars','hotelViews','meals','facilities','hotelPrices'];
+        return ['hotelImages','hotelRooms','hotelStars','hotelViews','hotelMeals','facilities','hotelFacilities','hotelPrices'];
     }
     /**
      * Returns a list of links.

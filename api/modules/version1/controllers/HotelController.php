@@ -34,7 +34,7 @@ class HotelController extends ActiveController
     {
         $q = \Yii::$app->request->get('q');
         //,hotelRooms,hotelStars,hotelViews,meals,facilities,hotelPrices
-        $result =Hotels::find()->with('hotelImages')->with('hotelMeals')->with('hotelRooms')->with('hotelStars')->with('hotelViews')->with('meals')->with('facilities')->with('hotelPrices')->where(['=','country_slug', $q])->orWhere(['=','name_slug', $q])->all();
+        $result =Hotels::find()->with('hotelImages')->with('hotelMeals')->with('hotelFacilities')->with('hotelRooms')->with('hotelStars')->with('hotelViews')->with('meals')->with('facilities')->with('hotelPrices')->where(['=','country_slug', $q])->orWhere(['=','name_slug', $q])->all();
         if (count($result) > 0) {
             return $result;
         } else {
